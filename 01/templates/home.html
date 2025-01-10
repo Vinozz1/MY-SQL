@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOME PAGE.....</h1>
+    {{ titleWeb }}
+    <hr>
+    <table border="1">
+        <tr>
+            <th>AUTHOR</th>
+            <th>CONTENT</th>
+            <th>DATE</th>
+        </tr>
+        {% for dt in data %}
+        <tr>
+            <td> {{ dt.author}} </td>
+            <td> {{ dt.content}} </td>
+            <td> {{ dt.date}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+        {% if usia >= 20 %}
+            <p>Ileggal</p>
+        {% else %}
+            <p>Legal</p>
+        {% endif %}
+</body>
+</html>
