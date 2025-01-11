@@ -3,6 +3,8 @@ app = Flask(__name__)
 
 titleWeb = "FlaskKu"
 
+data1 = ["I", "G", "S"]
+
 data = [
     {
         'author' : 'God',
@@ -16,10 +18,17 @@ data = [
     }
 ]
 
+bio = {
+        "name": "Jonathan Alvino",
+        "age": 16,
+        "profession": "jobless rn",
+        "hobbies": ["makan", "tedok", "halu"]
+    }
+
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html', titleWeb = titleWeb, data=data, usia = 20 )
+    return render_template('home.html', titleWeb = titleWeb, data=data, usia = 20, bio=bio )
 
 @app.route("/about")
 def about():
@@ -32,6 +41,10 @@ def blog():
 @app.route("/content")
 def content():
     return render_template('content.html')
+
+@app.route("/igs")
+def igs():
+    return render_template('igs.html', data=data1)
 
 
 

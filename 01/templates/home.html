@@ -9,7 +9,7 @@
     <h1>HOME PAGE.....</h1>
     {{ titleWeb }}
     <hr>
-    <table border="1">
+    <table border="1" , margin="center">
         <tr>
             <th>AUTHOR</th>
             <th>CONTENT</th>
@@ -29,5 +29,16 @@
         {% else %}
             <p>Legal</p>
         {% endif %}
+    <hr>
+    <h1>Welcome to My Bio</h1>
+    <p>Name: {{ bio.name }}</p>
+    <p>Age: {{ bio.age }}</p>
+    <p>Profession: {{ bio.profession }}</p>
+    <p>Hobbies:</p>
+    <ul>
+        {% for hobby in bio.hobbies %}
+        <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

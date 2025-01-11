@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block konten %}
+
+<style>
+    ul {
+        list-style-type: none; 
+        padding: 0;
+        display: flex;
+        justify-content: center; 
+        gap: 5px;
+        align-items: center;
+        display: flex;
+        height: 100vh  ;
+    }
+
+    li {
+        text-align: center; 
+        width: 50px; 
+        height: 50px; 
+        line-height: 50px;
+        border: 2px solid black;
+        font-size: 18px; 
+        color: black; 
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+</style>
+
+<ul>
+    {% for letter in data %}
+    <li class="{% if letter == 'I' %}red{% elif letter == 'G' %}green{% else %}blue{% endif %}">
+        {{ letter }}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
