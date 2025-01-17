@@ -4,9 +4,24 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def home():
-    name = request.args.get("name")
-    umur = int(request.args.get("umur"))
-    return render_template("home.html", name = name, umur=umur)
+    if 'name' in request.args.keys() and 'umur' in request.args.keys():
+        name = request.args.get("name")
+        ## or = request.args["name"]
+        umur = int(request.args.get("umur"))
+        return render_template("home.html", name = name, umur=umur)
+    elif request.args["name"] == "budi":
+        return redirect("/contact1")
+    elif request.args["name"] == "winson":
+        return redirect(url_for("contact2"))
+    else:
+        return f"404 Not Found.."
+@app.route('/contact1')
+def contact2():
+    return "<h1>Contact Page</h1>"
+
+@app.route('/tester/<string:kata>/<int:angka>/<terserah>')
+def tester(kata, angka, terserah):
+    return render_template("tester.html", kata=kata, angka=angka, terserah=terserah)
 
 @app.route('/calculator')
 def calculator():
