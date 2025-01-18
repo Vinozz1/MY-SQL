@@ -1,0 +1,32 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+}
+
+header {
+    text-align: center;
+}
+
+header img{
+    width: 20%;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+header li {
+    padding: 20px;
+}
+
+header a:hover {
+    background-color: blue;
+}
