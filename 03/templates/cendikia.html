@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
+{% block title %}
+    <title>Cendekia Page</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
 
 {% block konten %}
-    <h1>CENDIKIA... </h1>
-    <main>
-        <img src="https://scholar.google.com/intl/en/scholar/images/2x/scholar_logo_64dp.png" width="200px">
-        <form action="{{ url_for('CARI')}}" method="post" id="cariCendikia">
-            <input name="keyword"><span><a href="" onclick="myFunc()">🔫</a></span>
-        </form>
-    </main>
+
+<main>
+    <img src="https://scholar.google.co.id/intl/id/scholar/images/2x/scholar_logo_64dp.png" width="200px"></img>
+    <form action="{{ url_for('CARI')}}" method="POST" id="caricendikia" target="_blank">
+        <input name="keyword" type="text">
+        <span><a onclick="myFunc()">🔎</a></span>
+    </form>
+</main>
+    
+
+
+        <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+
+
 {% endblock %}

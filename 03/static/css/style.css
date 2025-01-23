@@ -30,3 +30,23 @@ header li {
 header a:hover {
     background-color: blue;
 }
+
+main {
+    text-align: center;
+}
+
+main form input,
+span{
+    width: 40%;
+    padding: 7px;
+    border: solid 1px cornflowerblue;
+    font-size: 20px;
+}
+
+main form span {
+    background-color: cornflowerblue;
+}
+
+main form a {
+    text-decoration: none;
+}
