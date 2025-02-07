@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+        background-color: aliceblue;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    img{
+        width: 200px;
+        text-align: center;
+    }
+
+    main{
+        width: 30%;
+        background-color: aqua;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    fieldset{
+        padding: 12px 20px;
+    }
+
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    input[type=date],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    button{
+        padding: 10px 30px;
+    }

@@ -23,6 +23,28 @@
                 <label for="tanggal">tanggal:</label>
                     <input name="tanggal" id="tanggal" type="date" required>
             </fieldset>
+            
+            <fieldset>
+                <legend>Cita-Cita: </legend>
+                <label for="programmer">programmer:</label>
+                    <input name="cita" id="programmer" type="radio"  value="programmer">
+                <label for="bukanprogrammer">bukanprogrammer:</label>
+                    <input name="cita" id="bukanprogrammer" type="radio"  value="programmer">         
+            </fieldset>
+
+            <label for="agama"></label>
+            <select name="agama" id="agama">
+                <option value="islam">ISLAM</option>
+                <option value="kristen">KRISTEN</option>
+                <option value="katolik">KATOLIK</option>
+                <option value="hindu">HINDU</option>
+                <option value="buddha">BUDDHA</option>
+                <option value="konghucu">KONGHUCU</option>
+            </select>
+
+            <label for="Tentang">Tentang :</label>
+            <textarea name="Tentang" id="Tentang"></textarea>
+            <button type="submit"></button>
         </form>
     </main>
 {% endblock %}

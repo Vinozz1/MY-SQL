@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block konten %}
+    <header>
+        <h1><u>DATA BIODATA</u></h1>
+        <img src=" {{ url_for('static', filename='img/Jo Yuri 2.jpg') }}" alt="">
+    </header>    
+
+    <main>
+        <p><b>NAMA:</b><br>
+            {{ nama }}
+        </p>
+        <p><b>KELAS:</b><br>
+            {{ kelas }}
+        </p>
+        <p><b>EMAIL:</b><br>
+            {{ email }}
+        </p>
+        <p><b>TEMPAT, TANGGAL LAHIR:</b><br>
+            {{ tempat }}, {{ tanggal }}
+        </p>
+        <p><b>Cita-cita:</b><br>
+            {{ cita }}
+        </p>
+        <p><b>Agama:</b><br>
+            {{ agama }}
+        </p>
+        <p><b>Tentang:</b><br>
+            {{ tentang }}
+        </p>
+    </main>
+
+{% endblock %}

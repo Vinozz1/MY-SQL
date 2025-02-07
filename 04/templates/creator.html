@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block konten %}
+    <header>
+        <h1><u>ketua PAGE</u></h1>
+    </header>
+
+    <main>
+        <p><b>SELAMAT DATANG CREATOR</b></p>
+        <p><b>INI ADALAH HALAMAN CREATOR</b></p>
+        <p><b>ANDA DAPAT MENGEDIT DATA BIODATA</b></p>
+        <p><b>ATAU MENGHAPUS DATA BIODATA</b></p>
+        <p><b>ATAU MENAMBAH DATA BIODATA</b></p>
+        <a href="{{ url_for('logout' ) }}">LOGOUT</a>
+    </main>
+
+{% endblock %}
