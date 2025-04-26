@@ -1,10 +1,10 @@
 from flask import *
 import secrets
-from datetime import datetime
+from datetime import timedelta
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
-app.permanet_session_lifetime = datetime.timedelta(minutes=5)
+app.permanent_session_lifetime = timedelta(minutes=5)
 # session.permanent = True
 
 users = [

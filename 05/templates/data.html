@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>INPUT DATA</h1>
+    <form action="/simpan" method="post">
+        <input type="text" name="nama" placeholder="enter nama kota">
+        <button type="submit">simpan</button>
+
+    </form>
+{% endblock %}
